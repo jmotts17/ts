@@ -8,8 +8,8 @@ var Friend = /** @class */ (function () {
         this.phoneNumber = phoneNumber;
         this.email = email;
     }
-    Friend.prototype.debug = function () {
-        console.debug(this.name + "|" + this.age + "|" + this.phoneNumber + "|" + this.email);
+    Friend.prototype.print = function () {
+        console.log(this.name + "|" + this.age + "|" + this.phoneNumber + "|" + this.email);
     };
     return Friend;
 }());
@@ -21,7 +21,8 @@ var friends = [
     new Friend("Rich", 30, "Rich@email.com", "789-456-1230"),
     new Friend("Noah", 26, "Noah@email.com", "654-987-1320")
 ];
+friends.push(new Friend("Leigha", 30, "Leigha@email.com", "518-123-4567"));
 for (var _i = 0, friends_1 = friends; _i < friends_1.length; _i++) {
     var friend = friends_1[_i];
-    friend.debug();
+    friend.print();
 }
